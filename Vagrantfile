@@ -14,6 +14,8 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-amd64-vagrant-disk1.box"
 
   # Install docker into the VM
-  config.vm.provision "docker"
+  config.vm.provision "docker" do |d|
+    d.pull_images "ubuntu"
+  end
 
 end

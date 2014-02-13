@@ -35,3 +35,17 @@ Our Vagrant file now uses a different base box. If you already have a VM provisi
 vagrant destroy
 vagrant up
 ```
+
+# Playing with Docker
+
+Now we have Docker install in the VM lets see that we can do with it. Run `docker` for a list of options
+
+Say hello `docker run -t ubuntu echo hello`
+Run bash `docker run -i -t ubuntu /bin/bash`
+
+Run a command as a deamon `docker run -d -t ubuntu /bin/bash`
+Run a deamon that wont quit `docker run -d -t ubuntu /bin/bash -c "while true; do echo 'hello world'; sleep 1; done"`
+
+Attach into a running container `docker attach CONTAINER_ID`
+Stop a running container `docker stop CONTAINER_ID`
+Start a stopped container `docker start CONTAINER_ID`
