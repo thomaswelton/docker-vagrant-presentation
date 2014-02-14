@@ -87,4 +87,15 @@ docker build -t apache .
 docker run -d -p 8888:80 -t apache
 ```
 
+# Using the onbuild command
+
+Now we've changed the `ADD` command to `ONBUILD` it's now super easy to make new PHP apps. Lets rebuild the apache image 
+
+```
+docker build -t apache-base .
+```
+
+Now make a new app that extends the apache-base
+
+
 

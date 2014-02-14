@@ -11,7 +11,7 @@ RUN chmod 755 /*.sh
 ADD supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 
 RUN rm -rf /var/www
-ADD www /var/www
+ONBUILD ADD www /var/www
 
 EXPOSE 80
 CMD ["/run.sh"]
