@@ -71,3 +71,12 @@ And then push this image to the public index
 ```
 docker push IMAGE_NAME
 ```
+
+# Using Dockerfiles
+
+Build an docker image from a directory containing a Dockerfile
+
+```
+docker build -t myubuntu .
+```
+
