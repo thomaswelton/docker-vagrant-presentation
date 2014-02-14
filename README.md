@@ -80,3 +80,11 @@ Build an docker image from a directory containing a Dockerfile
 docker build -t myubuntu .
 ```
 
+# Running apache
+
+```
+docker build -t apache .
+docker run -d -p 8888:80 -t apache
+```
+
+
