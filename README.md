@@ -49,3 +49,25 @@ Run a deamon that wont quit `docker run -d -t ubuntu /bin/bash -c "while true; d
 Attach into a running container `docker attach CONTAINER_ID`
 Stop a running container `docker stop CONTAINER_ID`
 Start a stopped container `docker start CONTAINER_ID`
+
+
+# Creating Docker images
+
+From the base ubuntu image install Vim, exit the container.
+We can then do a diff on that container to see what has changes
+
+```
+docker diff CONTAINER_ID
+```
+
+We can then commit these changes to a new image
+
+```
+docker commit CONTAINER_ID IMAGE_NAME
+```
+
+And then push this image to the public index
+
+```
+docker push IMAGE_NAME
+```
