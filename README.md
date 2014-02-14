@@ -77,6 +77,6 @@ docker push IMAGE_NAME
 Build an docker image from a directory containing a Dockerfile
 
 ```
-docker build -t myubuntu .
+docker build -t curl .
 ```
 
